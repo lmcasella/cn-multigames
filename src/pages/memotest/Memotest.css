@@ -1,0 +1,122 @@
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #4B4C5A;
+  background-image: url(/src/assets/memotest/background-dark.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.itemsContainer {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* .mainContainer {
+    width: 100%;
+    height: 100%;
+  } */
+
+  .itemsContainer {
+    width: 100%;
+    min-height: 900px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .itemsContainer {
+    width: 100%;
+    
+  }
+}
+
+/* Medium devices (landscape tablets, 800px and up) */
+@media only screen and (min-width: 800px) {
+  .itemsContainer {
+    width: 824px;
+    
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .itemsContainer {
+    width: 1000px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .itemsContainer {
+    width: 1000px;
+  }
+}
+
+.items {
+  display: grid;
+  grid-gap: 10px;
+  border-radius: 20px;
+  list-style-type: none;
+  gap: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+.modal {
+  display: flex;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  width: 600px; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
