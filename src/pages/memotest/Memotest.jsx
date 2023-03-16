@@ -70,53 +70,62 @@ export default function Memotest() {
 
   return (
     
-    <Grid
+    <main
       className="mainContainer"
-      container
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-      sx={{
-        xs: {
-          justifyContent: "start",
-          alignItems: "start"
-        }
-      }}
+      // sx={{
+      //   xs: {
+      //     justifyContent: "start",
+      //     alignItems: "start"
+      //   }
+      // }}
     >
-      <Grid item className="itemsContainer">
-        <Grid padding="32px">
+      <div className="itemsContainer">
+        <div style={{marginBottom: "32px"}}>
           <h1>MEMOTEST - Cartoon Network</h1>
           <p>Encuentra dos cartas iguales y completa todas para ganar</p>
-        </Grid>
+        </div>
 
-        <Grid
-          padding="32px"
-          sx={{
-            xs: {
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }
-          }}
+        <div
+          // sx={{
+          //   xs: {
+          //     display: 'flex',
+          //     flexDirection: 'column',
+          //     justifyContent: 'center',
+          //     alignItems: 'center'
+          //   }
+          // }}
+          
         >
-          <ul className="items" style={{display: 'flex', flexWrap: 'wrap'}} >
+          <ul
+            className="items"
+            // style={{display: 'flex', flexWrap: 'wrap'}}
+          >
             {IMAGES.map((image) => {
               const [, url] = image.split("|");
 
               return (
                 <li
+                  className="item"
                   onClick={() =>
                     selected.length < 2 &&
                     setSelected((selected) => selected.concat(image))
                   }
                   key={image}
+                  // style={{
+                  //   padding: 10,
+                  //   border: "2px solid #f4f4f4",
+                  //   borderRadius: 10,
+                  //   cursor: "pointer",
+                  //   width: '100px',
+                  // }}
                   style={{
-                    padding: 10,
+                    padding: '5px',
+                    width: '100px',
+                    marginTop: '10px',
+                    textAlign: 'center',
                     border: "2px solid #f4f4f4",
                     borderRadius: 10,
                     cursor: "pointer",
-                    width: '100px',
                   }}
                 >
                   
@@ -145,8 +154,8 @@ export default function Memotest() {
               </dialog>
             </div>
           )}
-        </Grid>
-      </Grid>
-    </Grid>
+        </div>
+      </div>
+    </main>
   );
 }

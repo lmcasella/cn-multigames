@@ -1,6 +1,9 @@
 .mainContainer {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #4B4C5A;
   background-image: url(/src/assets/memotest/background-dark.jpg);
   background-position: center;
@@ -9,63 +12,34 @@
 }
 
 .itemsContainer {
+  padding: 32px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  /* .mainContainer {
-    width: 100%;
-    height: 100%;
-  } */
-
-  .itemsContainer {
-    width: 100%;
-    min-height: 900px;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .itemsContainer {
-    width: 100%;
-    
-  }
-}
-
-/* Medium devices (landscape tablets, 800px and up) */
-@media only screen and (min-width: 800px) {
-  .itemsContainer {
-    width: 824px;
-    
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .itemsContainer {
-    width: 1000px;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .itemsContainer {
-    width: 1000px;
-  }
-}
-
 .items {
-  display: grid;
+  /* display: grid;
   grid-gap: 10px;
   border-radius: 20px;
   list-style-type: none;
+  gap: 10px; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  grid-gap: 10px;
   gap: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .itemsContainer {
+    width: 100%;
+    min-height: 900px;
+  }
+
   .items {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
@@ -73,24 +47,80 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .itemsContainer {
+    width: 100%;
+  }
+
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 634px) {
+  .itemsContainer {
+    width: 100%;
+  }
+
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+
+  .item {
+    flex-basis: 80px;
+  }
+}
+
+@media only screen and (min-width: 746px) {
+  .itemsContainer {
+    width: 100%;
+  }
+
   .items {
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
   }
 }
 
 @media only screen and (min-width: 800px) {
+  .itemsContainer {
+    width: auto;
+  }
+
   .items {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  
+}
+
+@media only screen and (min-width: 855px) {
+  .itemsContainer {
+    width: 824px;
+  }
+
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .item {
+    flex-basis: 100px;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  .itemsContainer {
+    width: 900px;
+  }
+
   .items {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  .itemsContainer {
+    width: 900px;
+  }
+
   .items {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
