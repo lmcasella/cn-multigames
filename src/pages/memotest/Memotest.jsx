@@ -81,8 +81,8 @@ export default function Memotest() {
     >
       <div className="itemsContainer">
         <div style={{marginBottom: "32px"}}>
-          <h1>MEMOTEST - Cartoon Network</h1>
-          <p>Encuentra dos cartas iguales y completa todas para ganar</p>
+          <h1 className="title">MEMOTEST - Cartoon Network</h1>
+          <p className="title-sub">Encuentra dos cartas iguales y completa todas para ganar</p>
         </div>
 
         <div
@@ -118,15 +118,6 @@ export default function Memotest() {
                   //   cursor: "pointer",
                   //   width: '100px',
                   // }}
-                  style={{
-                    padding: '5px',
-                    width: '100px',
-                    marginTop: '10px',
-                    textAlign: 'center',
-                    border: "2px solid #f4f4f4",
-                    borderRadius: 10,
-                    cursor: "pointer",
-                  }}
                 >
                   
                     {/* <img alt="icon" src={url} /> */}
@@ -147,8 +138,8 @@ export default function Memotest() {
           {hasWon && (
             <div className="modal">
               <dialog className="modal-content" open>
-                <h2 style={{marginBottom: '24px'}}>Felicidades, ganaste!</h2>
-                <button style={{padding: '16px', width: '80%'}} onClick={() => location.reload()}>
+                <h2 className="text-win">Felicidades, ganaste!</h2>
+                <button className="button-win" onClick={() => location.reload()}>
                   Volver a jugar
                 </button>
               </dialog>
