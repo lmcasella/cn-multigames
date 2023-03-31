@@ -62,7 +62,7 @@ export default function Memotest() {
 
       setTimeout(() => {
         setSelected([]);
-      }, 500);
+      }, 1000);
     }
   }, [selected]);
 
