@@ -1,7 +1,9 @@
-import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./Memotest.css";
+
+import search from "../../assets/memotest/search.png";
 
 import bellota from "../../assets/memotest/bellota.png";
 import billy from "../../assets/memotest/billy.png";
@@ -68,6 +70,12 @@ export default function Memotest() {
     guessed.length === IMAGES.length && setHasWon(true);
   }, [guessed]);
 
+  const navigate = useNavigate();
+
+		const handleClickReturn = () => {
+				navigate("/");
+		}
+
   return (
     
     <main
@@ -81,7 +89,7 @@ export default function Memotest() {
     >
       <div className="itemsContainer">
         <div style={{marginBottom: "32px"}}>
-          <h1 className="title">MEMOTEST - Cartoon Network</h1>
+          <h1 className="title">MEMOTEST</h1>
           <p className="title-sub">Encuentra dos cartas iguales y completa todas para ganar</p>
         </div>
 
@@ -126,7 +134,7 @@ export default function Memotest() {
                     ) : (
                       <img
                         alt="icon"
-                        src="src/assets/search.png"
+                        src={search}
                         style={{ color: "#fff" }}
                       />
                     )}
@@ -134,6 +142,8 @@ export default function Memotest() {
               );
             })}
           </ul>
+
+          
 
           {hasWon && (
             <div className="modal">
@@ -145,6 +155,10 @@ export default function Memotest() {
               </dialog>
             </div>
           )}
+        </div>
+
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <button style={{marginTop: "32px"}} className="button-menu" onClick={handleClickReturn}>Volver al menú</button>
         </div>
       </div>
     </main>

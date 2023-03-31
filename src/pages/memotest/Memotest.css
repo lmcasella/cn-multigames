@@ -40,22 +40,22 @@
 
 .modal {
   display: flex;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100vw; /* Full width */
+  width: 100vw;
   height: 100vh; /* Full height */
-  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 20px;
-  width: 600px; /* Could be more or less, depending on screen size */
+  background-color: rgba(0, 0, 0, 1);
+  padding: 30px 20px;
+  width: 600px;
   border-radius: 10px;
   border: 0px;
   display: flex;
@@ -76,7 +76,8 @@
   width: 80%;
   padding: 16px;
   text-transform: uppercase;
-  background: linear-gradient(#ec098c,#f55a86);
+  background: rgb(34,143,195);
+  background: linear-gradient(180deg, rgba(34,143,195,1) 0%, rgba(0,212,167,1) 100%);
   border-style: none;
   outline-style: none;
   border-radius: 8px;
@@ -86,6 +87,26 @@
 .button-win:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.button-menu {
+	font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+  width: 80%;
+  padding: 16px;
+  text-transform: uppercase;
+	background: linear-gradient(#ec098c,#f55a86);
+  border-style: none;
+  outline-style: none;
+  border-radius: 8px;
+  transition: .3s cubic-bezier(.175,.885,.32,2);
+}
+
+.button-menu:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 @media only screen and (max-width: 392px) {
@@ -123,6 +144,10 @@
   .button-win {
     padding: 14px;
     font-size: 10px;
+  }
+
+  .button-menu{
+    width: 100%;
   }
 }
 
