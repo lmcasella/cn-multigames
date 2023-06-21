@@ -30,7 +30,7 @@ export default function Home() {
 						</button>
 
 						<button className="button-home button-fastwords" style={{margin: '14px 0px'}}>
-							(Próximamente) Fast Words
+							(Próximamente) Palabras por Minuto
 						</button>
 
 						<button className="button-home button-quiz">

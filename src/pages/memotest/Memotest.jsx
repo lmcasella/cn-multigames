@@ -56,6 +56,7 @@ export default function Memotest() {
 
   useEffect(() => {
     if (selected.length === 2) {
+      console.log(selected);
       if (selected[0].split("|")[1] === selected[1].split("|")[1]) {
         setGuessed((guessed) => guessed.concat(selected));
       }
@@ -78,36 +79,15 @@ export default function Memotest() {
 
   return (
     
-    <main
-      className="mainContainer"
-      // sx={{
-      //   xs: {
-      //     justifyContent: "start",
-      //     alignItems: "start"
-      //   }
-      // }}
-    >
+    <main className="mainContainer">
       <div className="itemsContainer">
         <div style={{marginBottom: "32px"}}>
           <h1 className="title">MEMOTEST</h1>
           <p className="title-sub">Encuentra dos cartas iguales y completa todas para ganar</p>
         </div>
 
-        <div
-          // sx={{
-          //   xs: {
-          //     display: 'flex',
-          //     flexDirection: 'column',
-          //     justifyContent: 'center',
-          //     alignItems: 'center'
-          //   }
-          // }}
-          
-        >
-          <ul
-            className="items"
-            // style={{display: 'flex', flexWrap: 'wrap'}}
-          >
+        <div>
+          <ul className="items">
             {IMAGES.map((image) => {
               const [, url] = image.split("|");
 
@@ -119,13 +99,6 @@ export default function Memotest() {
                     setSelected((selected) => selected.concat(image))
                   }
                   key={image}
-                  // style={{
-                  //   padding: 10,
-                  //   border: "2px solid #f4f4f4",
-                  //   borderRadius: 10,
-                  //   cursor: "pointer",
-                  //   width: '100px',
-                  // }}
                 >
                   
                     {/* <img alt="icon" src={url} /> */}
